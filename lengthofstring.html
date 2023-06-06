@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+        const promptStringLengths = (arr) => {
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+      const strLength = parseInt(prompt(`Enter the Length of the String '${arr[i]}':`));
+      result.push(arr[i].substring(0, strLength));
+    }
+    return result;
+  };
+  const arr = ["hello", "world", "javascript"];
+  const result = promptStringLengths(arr);
+  document.write(result);
+        </script>
+        
+    </body>
+</html>
+
+    

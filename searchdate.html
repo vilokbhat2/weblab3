@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>regex</title>
+
+<script>
+
+
+
+
+function date()
+{
+const inputString = prompt("Enter a string to search for a date in format dd/mm/yyyy");
+const regex = /(0[1-9]|[1-2][0-9]|3[0-1])[\/\-](0[1-9]|1[0-2])[\/\-]([0-9][0-9][0-9][1-9])$/;
+const match = inputString.match(regex); 
+if (match !== null) 
+{
+  alert(match[0]);
+} 
+else 
+{
+  alert("No date found in the input string.");
+}
+}
+</script>
+
+</head>
+
+
+<div>results :<button onclick="date()">Date search in a string</button></div>
+</div>
+<hr />
+<div>
+
+
+</p>
+</body>
+
+</html>

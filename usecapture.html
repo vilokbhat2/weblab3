@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>useCapture Example</title>
+</head>
+<body>
+  <div id="outer">
+    <div id="inner">
+      <button id="myButton">Click Me</button>
+    </div>
+  </div>
+  <script>
+    function handleClick(e) {
+      console.log(e.target.id);
+    }
+
+    const myButton = document.querySelector('#myButton');
+
+    // Add event listener with useCapture set to false (default)
+    myButton.addEventListener('click', handleClick);
+    // Output: "myButton", "inner", "outer"
+
+    // Add event listener with useCapture set to true
+    myButton.addEventListener('click', handleClick, true);
+    // Output: "outer", "inner", "myButton"
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <style>
+   div{
+    background-color: pink;
+    height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="counter();">click me</button>
+  <div id="output">See the result here :</div>
+  <script type="text/javascript">
+    function counter() {
+     if(localStorage.hits){
+    localStorage.hits=Number(localStorage.hits)+1;
+   }
+ else{
+  localStorage.hits=1;
+ }
+ document.getElementById('output').innerHTML= "You have clicked counter button for"+ " "+ localStorage.hits +" "+"times";
+}
+  </script>
+ 
+</body>
+</html>

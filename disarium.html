@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+        function isDisarium(num) {
+    let sum = 0;
+    let numStr = num.toString();
+    for (let i = 0; i < numStr.length; i++) {
+      sum += Math.pow(parseInt(numStr[i]), i+1);
+    }
+    return sum === num;
+  }
+  
+  for (let i = 1; i <= 100; i++) {
+    if (isDisarium(i)) {
+      document.write(i);
+    }
+  }
+        </script>
+        
+    </body>
+</html>
+

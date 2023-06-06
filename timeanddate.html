@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display System Date and Time</title>
+  </head>
+  <body>
+    <div id="datetime"></div>
+    <script>
+      const datetimeElem = document.getElementById('datetime');
+      const currentDate = new Date();
+      datetimeElem.innerHTML = currentDate.toString();
+    </script>
+  </body>
+</html>

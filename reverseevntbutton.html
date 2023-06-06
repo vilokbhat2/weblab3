@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+        const reverseNumber = (num) => {
+    let reversedNum = 0;
+    while (num > 0) {
+      reversedNum = (reversedNum * 10) + (num % 10);
+      num = Math.floor(num / 10);
+    }
+    return reversedNum;
+  };
+  
+  const button = document.querySelector('button');
+  button.addEventListener('click', () => {
+    const input = document.querySelector('input');
+    const num = parseInt(input.value);
+    const reversedNum = reverseNumber(num);
+    alert(`Reversed Number: ${reversedNum}`);
+  });
+  
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+        const testNum = (num) => new Promise ((resolve, reject) => {
+    if (num > 20) {
+      resolve('greater than ten')
+    } else {
+      reject('less than ten')
+    }
+  })
+  
+  testNum(2)
+      .then(function(value) {
+    document.write(value)
+  })
+  .catch(function(error) {
+    document.write(error)
+  })
+        </script>
+        
+    </body>
+</html>
